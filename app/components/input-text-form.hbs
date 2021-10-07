@@ -1,0 +1,35 @@
+<div id="main">
+	<div class="inner">
+		<section>
+			<header class="major">
+				<h2>{{@title}}</h2>
+			</header>
+			<div class="features">
+				<article>
+					<div class="content">
+						<form>
+							<label for="user-comment">Input text:</label>
+							<Textarea
+							  id="ClassifyMessage"
+							  @value={{this.messagetext}}
+							  rows="4"
+							  cols="50"
+							/>
+
+							<br><br>
+							<button type="button">
+								<LinkTo @route={{@where}} @query={{hash message=this.messagetext}}>Submit</LinkTo>
+							</button>
+							
+							<br><br>
+						</form>
+
+						<p>Click the "Submit" button and the text will be sent to a Spam or Ham Classifier which will decide whether the input text is Spam or Ham".</p>
+					</div>
+				</article>
+				{{outlet}}
+			
+			</div>
+		</section>
+	</div>
+</div>

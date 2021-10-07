@@ -1,0 +1,41 @@
+{{page-title "Index"}}
+<html>
+	<head>
+		<title>Diana Patricia Corona Garcia</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<!-- Banner -->
+								<Banner/>
+
+							<!-- Section -->
+								
+								<section>
+									<header class="major">
+										<h2>Projects</h2> 
+									</header>
+
+									<div class="features">
+									<article>
+									    <ul class="results">
+										    {{#each @model as |project|}}
+										      <li><Project @project={{project}} /></li>
+										    {{/each}}
+										  </ul>
+									</article>	
+									</div>
+								</section>
+						</div>
+					</div>
+			</div>
+	</body>
+</html>
+{{outlet}}

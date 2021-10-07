@@ -1,0 +1,21 @@
+{{page-title "Prediction"}}
+
+<article>
+	<div class="content">
+	<article>
+		<div class="content">
+			<h3>Result</h3>
+			<ul class="results">
+			    {{#each @model as |result|}}
+			      <li>
+					<p>
+						The message <b> {{result.message}} </b> is <b> {{result.label}} </b> <br>
+						The message has a probability of <b> {{result.spamprob}} %  </b> of being spam
+					</p>
+				   </li>
+			    {{/each}}
+			</ul>
+		</div>
+	</article>
+	</div>
+</article>

@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "MLPClassifier",
+      "description": "Multi-layer Perceptron (MLP) is a supervised learning algorithm that learns a function by training on a dataset. This model has 700 hidden layers.",
+      "route": "MLPClassifier"
+    },
+    {
+      "id": 2,
+      "title": "Kneighbor",
+      "description": "Classification is computed from a simple majority vote of the 2 nearest neighbors of each point: a query point is assigned the data class which has the most representatives within the nearest neighbors of the point.",
+      "route": "kneighbor"
+    },
+    {
+      "id": 3,
+      "title": "Decision Tree",
+      "description": "Decision Trees create a model that predicts if a message is spam by learning simple decision rules inferred from the data.",
+      "route": "decisiontree"
+    },
+    {
+      "id": 4,
+      "title": "Random Forest",
+      "description": "20 Trees are formed from a sample drawn with replacement from the training set.",
+      "route": "randomforest"
+    }
+  ]
+}
