@@ -6,9 +6,9 @@ export default class DecisiontreePredictionRoute extends Route {
   @service store;
 
   async model(params) {
-    console.log('estoy en prediction Mlpclassifier');
+    console.log('estoy en prediction Decisiontree');
     console.log(params);
-    let response = await this.store.query('Mlpclassifier', params);
+    let response = await this.store.query('Decisiontree', params);
 
     console.log(response);
     return response;

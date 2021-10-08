@@ -6,9 +6,9 @@ export default class RandomforestPredictionRoute extends Route {
   @service store;
 
   async model(params) {
-    console.log('estoy en prediction Mlpclassifier');
+    console.log('estoy en prediction Randomforest');
     console.log(params);
-    let response = await this.store.query('Mlpclassifier', params);
+    let response = await this.store.query('Randomforest', params);
 
     console.log(response);
     return response;
