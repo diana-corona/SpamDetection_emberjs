@@ -13,15 +13,9 @@ Router.map(function () {
     this.route('prediction');
   });
 
-  this.route('kneighbor', function () {
-    this.route('prediction');
-  });
+  this.route('kneighbor', function () {});
 
-  this.route('decisiontree', function () {
-    this.route('prediction');
-  });
+  this.route('decisiontree', function () {});
 
-  this.route('randomforest', function () {
-    this.route('prediction');
-  });
+  this.route('randomforest', function () {});
 });

@@ -17,16 +17,40 @@
 							/>
 
 							<br><br>
-							<button type="button">
-								<LinkTo @route={{@where}} @query={{hash message=this.messagetext}}>Submit</LinkTo>
+							<button type="button" {{on "click" 	this.launchConfirmDialog }}>
+							  Submit
 							</button>
-							
+
 							<br><br>
 						</form>
 
 						<p>Click the "Submit" button and the text will be sent to a Spam or Ham Classifier which will decide whether the input text is Spam or Ham".</p>
 					</div>
 				</article>
+				{{#if this.responded }}
+					<article>
+						<div class="content">
+							<h3>Result</h3>
+							<ul class="results">
+							    {{#each this.response as |result|}}
+							      <li>
+									<p>
+										The message <b> {{result.message}} </b> is <b> {{result.label}} </b> <br>
+										The message has a probability of <b> {{result.spamprob}} %  </b> of being spam
+									</p>
+								   </li>
+							    {{/each}}
+							</ul>
+						</div>
+					</article>
+				{{/if}}
+				{{#if this.loading }}
+					<article>
+						<div class="content">
+							<h3>...loading result</h3>
+						</div>
+					</article>
+				{{/if}}
 				{{outlet}}
 			
 			</div>
